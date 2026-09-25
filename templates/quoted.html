@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>قیمت فعلی</h2>
+  <p><strong>{{ quote.name }}</strong> ({{ quote.symbol }})</p>
+  <p>قیمت: {{ quote.price | usd }}</p>
+  <a href="{{ url_for('buy') }}" class="btn btn-success">Buy</a>
+{% endblock %}

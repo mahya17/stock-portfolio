@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>ثبت نام</h2>
+  <form action="{{ url_for('register') }}" method="post">
+    <div class="mb-3">
+      <input name="username" class="form-control" placeholder="نام کاربری" autofocus>
+    </div>
+    <div class="mb-3">
+      <input name="password" type="password" class="form-control" placeholder="رمز عبور">
+    </div>
+    <div class="mb-3">
+      <input name="confirmation" type="password" class="form-control" placeholder="تکرار رمز عبور">
+    </div>
+    <button class="btn btn-primary" type="submit">ثبت</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>تاریخچه تراکنش‌ها</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>نماد</th>
+        <th>تعداد</th>
+        <th>قیمت</th>
+        <th>زمان</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        <td>{{ row.symbol }}</td>
+        <td>{{ row.shares }}</td>
+        <td>{{ row.price | usd }}</td>
+        <td>{{ row.transacted }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
